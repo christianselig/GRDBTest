@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		F1A07FDA2665A37100113C02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A07FD82665A37100113C02 /* LaunchScreen.storyboard */; };
 		F1A07FE52665A37100113C02 /* GRDBTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A07FE42665A37100113C02 /* GRDBTestTests.swift */; };
 		F1A07FF02665A37100113C02 /* GRDBTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A07FEF2665A37100113C02 /* GRDBTestUITests.swift */; };
+		F1A07FFE2665A38100113C02 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A07FFD2665A38100113C02 /* Persistence.swift */; };
+		F1A080012665A3CB00113C02 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = F1A080002665A3CB00113C02 /* GRDB */; };
+		F1A080032665A3E700113C02 /* input.json in Resources */ = {isa = PBXBuildFile; fileRef = F1A080022665A3E700113C02 /* input.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		F1A07FEB2665A37100113C02 /* GRDBTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRDBTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A07FEF2665A37100113C02 /* GRDBTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBTestUITests.swift; sourceTree = "<group>"; };
 		F1A07FF12665A37100113C02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1A07FFD2665A38100113C02 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F1A080022665A3E700113C02 /* input.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = input.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A080012665A3CB00113C02 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +107,9 @@
 			children = (
 				F1A07FCD2665A37000113C02 /* AppDelegate.swift */,
 				F1A07FCF2665A37000113C02 /* SceneDelegate.swift */,
+				F1A07FFD2665A38100113C02 /* Persistence.swift */,
 				F1A07FD12665A37000113C02 /* ViewController.swift */,
+				F1A080022665A3E700113C02 /* input.json */,
 				F1A07FD32665A37000113C02 /* Main.storyboard */,
 				F1A07FD62665A37100113C02 /* Assets.xcassets */,
 				F1A07FD82665A37100113C02 /* LaunchScreen.storyboard */,
@@ -144,6 +152,9 @@
 			dependencies = (
 			);
 			name = GRDBTest;
+			packageProductDependencies = (
+				F1A080002665A3CB00113C02 /* GRDB */,
+			);
 			productName = GRDBTest;
 			productReference = F1A07FCA2665A37000113C02 /* GRDBTest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = F1A07FC12665A37000113C02;
+			packageReferences = (
+				F1A07FFF2665A3CB00113C02 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = F1A07FCB2665A37000113C02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +247,7 @@
 			files = (
 				F1A07FDA2665A37100113C02 /* LaunchScreen.storyboard in Resources */,
 				F1A07FD72665A37100113C02 /* Assets.xcassets in Resources */,
+				F1A080032665A3E700113C02 /* input.json in Resources */,
 				F1A07FD52665A37000113C02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1A07FD22665A37000113C02 /* ViewController.swift in Sources */,
+				F1A07FFE2665A38100113C02 /* Persistence.swift in Sources */,
 				F1A07FCE2665A37000113C02 /* AppDelegate.swift in Sources */,
 				F1A07FD02665A37000113C02 /* SceneDelegate.swift in Sources */,
 			);
@@ -437,8 +453,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XG3L8T56DK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GRDBTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,8 +473,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XG3L8T56DK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GRDBTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1A07FFF2665A3CB00113C02 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1A080002665A3CB00113C02 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1A07FFF2665A3CB00113C02 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1A07FC22665A37000113C02 /* Project object */;
 }
